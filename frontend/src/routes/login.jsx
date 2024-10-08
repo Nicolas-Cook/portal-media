@@ -60,7 +60,7 @@ export default function Login() {
   return (
     <div id="login-register">
       <div>
-        <h1>{isLogin ? 'Login' : 'Registrarse'}</h1>
+        <h1>{isLogin ? 'Ingresar' : 'Registrarse'}</h1>
         <form onSubmit={handleSubmit}>
           <label>
             <span>Nombre de usuario:</span>
@@ -88,7 +88,7 @@ export default function Login() {
               />
             </label>
           )}
-          <button type="submit">{isLogin ? 'Login' : 'Registrarse'}</button>
+          <button type="submit">{isLogin ? 'Ingresar' : 'Registrarse'}</button>
           <p>
             {isLogin ? (
               <a href="#" onClick={toggleForm}>
@@ -96,7 +96,7 @@ export default function Login() {
               </a>
             ) : (
               <a href="#" onClick={toggleForm}>
-                Volver al Login
+                Volver al Ingreso
               </a>
             )}
           </p>

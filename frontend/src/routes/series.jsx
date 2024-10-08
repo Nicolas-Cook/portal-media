@@ -70,7 +70,7 @@ const Series = () => {
       </ul>
       <div className='pagination'>
       {startPage > 1 && (
-          <button onClick={() => paginate(1)}>First</button>
+          <button onClick={() => paginate(1)}>Primera</button>
         )}
         {Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i).map((pageNumber) => (
           <button
@@ -81,9 +81,6 @@ const Series = () => {
             {pageNumber}
           </button>
         ))}
-        {endPage < 501 && (
-          <button onClick={() => paginate(500)}>Last</button>
-        )}
       </div>
     </div>
   );
