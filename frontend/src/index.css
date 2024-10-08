@@ -1,0 +1,540 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #242424;
+  padding-top: 60px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  line-height: 1.5;
+  color: #f0eded;
+}
+textarea,
+input,
+button {
+  font-size: 1rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+  background-color: white;
+  line-height: 1.5;
+  margin: 0;
+}
+button {
+  color: #3992ff;
+  font-weight: 500;
+}
+
+textarea:hover,
+input:hover,
+button:hover {
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.6), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+}
+
+button:active {
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.4);
+  transform: translateY(1px);
+}
+/* Login / Registro */
+#login-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#login-register > div {
+  width: 300px;
+  padding: 20px;
+  background-color: #1a191b;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#login-register h1 {
+  text-align: center;
+}
+
+#login-register form {
+  display: flex;
+  flex-direction: column;
+}
+
+#login-register label {
+  margin-bottom: 10px;
+}
+
+#login-register label span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#login-register input {
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#login-register button[type="submit"] {
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+}
+
+#login-register p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#login-register a {
+  text-decoration: none;
+  color: #4CAF50;
+}
+
+#error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+/* Películas y Series */
+.media-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #333333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 300px;
+}
+
+.card img {
+  max-width: 75%; 
+  height: auto;
+  border-radius: 8px 8px 0 0;
+  object-fit: contain; 
+  margin: 0 auto; 
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin: 12px 0;
+}
+
+.card p {
+  font-size: 0.9rem;
+  margin: 4px 0;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .media-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .media-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+h1 {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #3e8e41;
+}
+
+.pagination button.active {
+  background-color: #1f4720;
+}
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: #333;
+  color: #fff;
+  z-index: 1;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar li {
+  margin-right: 20px;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #ccc;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.logout-btn:hover {
+  color: #ccc;
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    top: 0;
+    border-radius: 0;
+    left: 0; 
+    transform: none; 
+    width: 100%; 
+    padding: 10px 5px;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    width: 100%; 
+  }
+
+  .navbar li {
+    margin: 5px;
+    flex: 1 1 auto; 
+    text-align: center; 
+  }
+}
+/* Página cuenta */
+#account-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #1a191b;
+}
+
+#account-info h2 {
+  margin-top: 0;
+}
+
+#account-info p {
+  margin-bottom: 20px;
+}
+
+#account-info button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+#account-info button:hover {
+  background-color: #3e8e41;
+}
+#account-info input[readonly] {
+  border: none;
+  background-color: #b1adad;
+  cursor: not-allowed;
+  padding: 5px;
+  margin: 0;
+}
+
+#account-info label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#account-info input[type="password"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+/* Detalle */
+.detail {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #333333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.detail .info {
+  flex: 1 1 50%;
+  padding-right: 10px;
+}
+.poster {
+  max-width: 25%;
+  border-radius: 8px;
+  flex: 0 0 50%;
+  margin-right: 20px;
+}
+.cast-crew {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.cast-list, .crew-list {
+  list-style-type: none;
+  padding: 0;
+}
+.cast-list li, .crew-list li {
+  margin-bottom: 8px;
+}
+.cast-list li p, .crew-list li p {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .cast-crew {
+    grid-template-columns: 1fr;
+  }
+}
+
+.success-message {
+  color: green;
+}
+
+.error-message {
+  color: red;
+}
+/* Películas y series Favoritas */
+.fav-poster {
+  max-width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.fav-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  gap: 20px;
+}
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  max-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.toggle-button {
+  background-color: #333333;
+  border: 1px solid #888888;
+  border-radius: 0;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.toggle-button:first-child {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+.toggle-button:last-child {
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.toggle-button.active {
+  background-color: #cccccc;
+  color: rgb(0, 0, 0);
+  transform: scale(0.98);
+  color: #3992ff;
+}
+
+.toggle-button:hover {
+  background-color: #aaaaaa;
+}
+.fav-card {
+  background-color: #333333;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease-in-out;
+  border-radius: 16px;
+}
+
+.fav-card:hover {
+  transform: scale(1.05);
+}
+/* Página buscar */
+.search-page {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #444444;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.search-page h1 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.search-page input[type='text'],
+.search-page select,
+.search-page button {
+  padding: 10px;
+  border: 1px solid #888888;
+  border-radius: 5px;
+  background-color: #222222;
+  color: #ffffff;
+  max-width: 200px;
+  margin: 0 auto; 
+}
+
+.search-page button {
+  background-color: #3992ff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.search-page button:hover {
+  background-color: #007bb5;
+}
+
+.search-page ul.search-results {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.search-page ul.search-results li {
+  background-color: #333333;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 10px;
+  transition: transform 0.2s;
+}
+
+.search-page ul.search-results li:hover {
+  transform: scale(1.05);
+}
+
+.search-page ul.search-results h3 {
+  text-align: center;
+  margin: 10px; 
+}
+
+.search-page ul.search-results img {
+  width: 50%;
+  border-radius: 4px;
+  display: block;
+  margin: 0 auto;
+}
+
+
