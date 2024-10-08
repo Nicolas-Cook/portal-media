@@ -2,14 +2,19 @@
 
 Portal de películas y series haciendo uso the la API de TMDB para mostrar películas, series y guardar favoritas.
 
+## Tecnologías
+
+**Backend** construido usando **ExpressJS** y **PostgreSQL**.
+**Frontend** construido usando **React + Vite**.
+
 # Setup
 
 ## Backend
 
 1. **PostgreSQL**: Versión 17.0
-2. **Ejecutar scripts SQL para creación de la base de datos y tablas**: Navegar a carpeta `backend` y ejecutar `psql -U {usuario} -f database_setup.sql` (archivo en carpeta backend)
+2. **Ejecutar scripts SQL para creación de la base de datos y tablas**: Navegar a carpeta `backend` y ejecutar `psql -U {usuario} -f database_setup.sql` (archivo en carpeta backend).
 3. **Instalar dependencias**: Desde la carpeta `backend`, ejecutar `npm install`
-4. **Configuración**: Ingresar API Key (obtenida desde https://www.themoviedb.org/settings/api) en archivo **.env** (en carpeta backend) y cambiar credenciales para base de datos según sea necesario
+4. **Configuración**: Ingresar API Key (obtenida desde https://www.themoviedb.org/settings/api) en archivo **.env** (en carpeta backend) y cambiar credenciales para base de datos según sea necesario.
 5. **Iniciar el backend**: Desde la carpeta `backend`, ejecutar `npm start`
 
 ## Frontend
